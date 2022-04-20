@@ -2,7 +2,7 @@ package Breads;
 
 import java.util.List;
 
-public abstract class ABread {
+public abstract class ABread implements Cloneable {
     private int id;
     public int getId() { return this.id; }
     public void setId(int id) { this.id = id; }
