@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ace7993-491d-45ed-9a53-8f9becd217b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/bakery_project/src/test/java/Storage/Classes/BreadAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bakery_project/src/test/java/Storage/Classes/StorageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Breads/ABread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/Breads/ABread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Breads/FruitBread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Storage/Classes/Logger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Storage/Classes/Storage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Storage/Interfaces/IObserver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Storage/Interfaces/ISubject.class" beforeDir="false" />
-    </list>
+    <list default="true" id="9ace7993-491d-45ed-9a53-8f9becd217b7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
