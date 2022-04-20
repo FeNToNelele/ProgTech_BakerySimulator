@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ace7993-491d-45ed-9a53-8f9becd217b7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/ABread.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/ABread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bakery_project/src/test/java/Storage/Classes/BreadAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bakery_project/src/test/java/Storage/Classes/StorageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Storage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Breads/ABread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/Breads/ABread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Breads/FruitBread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Storage/Classes/Logger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Storage/Classes/Storage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Storage/Interfaces/IObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Storage/Interfaces/ISubject.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,12 +55,15 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Storage.Classes" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -60,7 +71,7 @@
       <recent name="Storage.Classes" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.StorageTest.addBread_addSameElementsTest">
     <configuration name="LoggerTest.hasToThrowIOExceptionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bakery_project" />
       <extension name="coverage">
@@ -77,8 +88,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StorageTest.addBread_addSameElementsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bakery_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Storage.Classes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Storage.Classes" />
+      <option name="MAIN_CLASS_NAME" value="Storage.Classes.StorageTest" />
+      <option name="METHOD_NAME" value="addBread_addSameElementsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StorageTest.addBread_addSameElementsTest" />
         <item itemvalue="JUnit.LoggerTest.hasToThrowIOExceptionTest" />
       </list>
     </recent_temporary>
