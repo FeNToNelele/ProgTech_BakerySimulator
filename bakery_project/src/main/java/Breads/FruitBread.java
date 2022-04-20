@@ -24,4 +24,9 @@ public class FruitBread extends ABread {
         temp.add("butter");
         return temp;
     }
+
+    @Override
+    public ABread clone() {
+        return null;
+    }
 }
