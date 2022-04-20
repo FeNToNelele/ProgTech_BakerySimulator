@@ -5,6 +5,7 @@ import Storage.Interfaces.IObserver;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class Storage {
     public Storage() {
@@ -26,10 +27,13 @@ public class Storage {
     public void addBread(ABread newBread) {
         if (!products.contains(newBread)) {
             products.add(newBread);
-        }
+        } else throw new BreadAlreadyExistsException();
     }
 
-    public void removeBread(int id) {
-        //var bread = products.stream().filter(x -> )
+    public void removeBread(ABread bread) {
+        if (products.contains(bread)) {
+            products.remove(bread);
+        }
+        else throw new NoSuchElementException();
     }
 }
