@@ -18,7 +18,7 @@ public class Storage {
     public List<ABread> getProducts() {
         List<ABread> temp = new ArrayList<>();
         for (ABread bread: products) {
-            //temp.add(bread.clone());
+            temp.add(bread.clone());
         }
         return temp;
     }

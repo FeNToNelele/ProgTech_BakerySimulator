@@ -18,4 +18,6 @@ public abstract class ABread implements Cloneable {
     List<String> ingredients;
     public abstract List<String>getIngredients();
 
+    @Override
+    public abstract ABread clone();
 }

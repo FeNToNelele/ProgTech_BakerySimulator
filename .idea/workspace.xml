@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ace7993-491d-45ed-9a53-8f9becd217b7" name="Changes" comment="" />
+    <list default="true" id="9ace7993-491d-45ed-9a53-8f9becd217b7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/ABread.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/ABread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Storage.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
