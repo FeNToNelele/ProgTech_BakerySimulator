@@ -8,15 +8,19 @@ public abstract class ABread implements Cloneable {
     public void setId(int id) { this.id = id; }
 
     private String name;
-    public String getName() { return this.name; }
-    public void setName(String name) { this.name = name; }
+    public abstract String getName();
 
     private int price;
     public int getPrice() { return this.price; }
-    public void setPrice(int price) { this.price = price; }
+    protected void setPrice(int price) throws Exception {
+        if (price < 0) {
+            throw new Exception("Price cannot be negative.");
+        }
+        this.price = price;
+    }
 
     List<String> ingredients;
-    public abstract List<String>getIngredients();
+    public abstract List<String> getIngredients();
 
     @Override
     public abstract ABread clone();

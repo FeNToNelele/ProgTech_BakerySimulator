@@ -1,11 +1,10 @@
 package Storage.Classes;
 
 import Breads.FruitBread;
+import Storage.Exceptions.BreadAlreadyExistsException;
 import org.junit.Rule;
 import org.junit.jupiter.api.Test;
 import org.junit.rules.ExpectedException;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class StorageTest {
     Storage target = new Storage();
@@ -14,8 +13,9 @@ class StorageTest {
     ExpectedException expectedException = ExpectedException.none();
 
     @Test
-    public void addBread_addSameElementsTest() {
-        FruitBread sampleBread = new FruitBread();
+    public void addBread_addSameElementsTest() throws BreadAlreadyExistsException {
+        FruitBread sampleBread = new FruitBread(1, 300,
+                new A);
 
         target.addBread(sampleBread);
         target.addBread(sampleBread);

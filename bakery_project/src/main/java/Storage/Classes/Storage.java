@@ -1,13 +1,15 @@
 package Storage.Classes;
 
 import Breads.ABread;
+import Storage.Exceptions.BreadAlreadyExistsException;
 import Storage.Interfaces.IObserver;
+import Storage.Interfaces.IObservedSubject;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-public class Storage {
+public class Storage implements IObservedSubject {
     public Storage() {
         this.observers = new ArrayList<>();
     }
@@ -24,7 +26,7 @@ public class Storage {
         return temp;
     }
 
-    public void addBread(ABread newBread) {
+    public void addBread(ABread newBread) throws BreadAlreadyExistsException {
         if (!products.contains(newBread)) {
             products.add(newBread);
         } else throw new BreadAlreadyExistsException();
@@ -35,5 +37,25 @@ public class Storage {
             products.remove(bread);
         }
         else throw new NoSuchElementException();
+    }
+
+
+    @Override
+    public void registerObserver(IObserver observer) {
+        observers.add(observer);
+    }
+
+    @Override
+    public void removeObserver(IObserver observer) {
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        for (int i = 0; i < observers.size(); i++) {
+            IObserver observer = observers.get(i);
+            //TODO: átadni a változásokat
+            //observer.log();
+        }
     }
 }

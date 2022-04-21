@@ -1,6 +1,6 @@
 package Storage.Interfaces;
 
-public interface ISubject {
+public interface IObservedSubject {
     void registerObserver(IObserver observer);
     void removeObserver(IObserver observer);
     void notifyObservers();
