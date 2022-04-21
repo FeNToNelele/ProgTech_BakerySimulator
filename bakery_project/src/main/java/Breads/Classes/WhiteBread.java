@@ -1,4 +1,4 @@
-package Breads;
+package Breads.Classes;
 
 public class WhiteBread {
 }
