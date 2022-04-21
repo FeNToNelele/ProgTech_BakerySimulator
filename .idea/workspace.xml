@@ -5,17 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ace7993-491d-45ed-9a53-8f9becd217b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/Interfaces/IIngredients.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/ABread.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/ABread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/FruitBread.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/FruitBread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/BreadAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Exceptions/BreadAlreadyExistsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Interfaces/IObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Interfaces/IObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Interfaces/ISubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Interfaces/IObservedSubject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/FruitBread.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/Classes/FruitBread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/SeedyBread.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/Classes/SeedyBread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/WhiteBread.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/Classes/WhiteBread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bakery_project/src/test/java/Storage/Classes/StorageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/test/java/Storage/Classes/StorageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Breads/ABread.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +21,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -53,6 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -60,6 +57,9 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="Breads" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Storage.Classes" />
@@ -116,6 +116,7 @@
       <workItem from="1650458730851" duration="2182000" />
       <workItem from="1650460941296" duration="2364000" />
       <workItem from="1650467942199" duration="39000" />
+      <workItem from="1650554173992" duration="1772000" />
     </task>
     <servers />
   </component>
