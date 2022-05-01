@@ -37,7 +37,12 @@ public class LoginForm extends JFrame {
 
                     // our SQL SELECT query.
                     // if you only need a few columns, specify them by name instead of using "*"
-                    String query = "SELECT * FROM users";
+                    //String query = "SELECT * FROM users";
+
+                    String email = tfEmail.getText().toString();
+                    String password = String.valueOf(pfPasswd.getPassword());
+
+                    String query = "select * from users where email = '" + email + "' and password = '" + password + "' ";
 
                     // create the java statement
                     Statement st = conn.createStatement();
@@ -46,16 +51,11 @@ public class LoginForm extends JFrame {
                     ResultSet rs = st.executeQuery(query);
 
                     // iterate through the java resultset
-                    while (rs.next())
-                    {
-                        int id = rs.getInt("id");
-                        String FirstName = rs.getString("username");
-                        String Email = rs.getString("email");
-                        String Password = rs.getString("password");
-
-
-                        // print the results
-                        System.out.format("%s, %s, %s, %s\n", id, FirstName,Email,Password);
+                    if(rs.isBeforeFirst()){
+                        System.out.println("siker");
+                    }
+                    else {
+                        System.out.println("nem siker");
                     }
                     st.close();
                 }
