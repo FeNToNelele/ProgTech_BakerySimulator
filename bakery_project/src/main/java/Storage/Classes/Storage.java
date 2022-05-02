@@ -10,6 +10,11 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 public class Storage implements IObservedSubject {
+    private static int ID = 1;
+    public static int getID() {
+        return ID++;
+    }
+
     public Storage() {
         this.observers = new ArrayList<>();
     }

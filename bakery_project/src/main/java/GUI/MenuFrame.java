@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 
 public class MenuFrame extends JFrame {
     private JButton btnCheckStorage;
-    private JButton btnStartProducing;
     private JPanel menuPanel;
 
     public MenuFrame() {
