@@ -7,8 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public abstract class ABread implements Cloneable, IIngredients {
-
-    protected ABread(int id) {
+    public ABread(int id) {
         this.id = id;
     }
 

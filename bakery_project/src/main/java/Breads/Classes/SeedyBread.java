@@ -9,7 +9,7 @@ import java.util.List;
 
 public class SeedyBread extends ABread {
 
-    protected SeedyBread(int id) {
+    public SeedyBread(int id) {
         super(id);
     }
 

@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ace7993-491d-45ed-9a53-8f9becd217b7" name="Changes" comment="" />
+    <list default="true" id="9ace7993-491d-45ed-9a53-8f9becd217b7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/ABread.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/ABread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/Classes/SeedyBread.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/Classes/SeedyBread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/GUI/MenuFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/GUI/MenuFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/GUI/MenuFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/GUI/MenuFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/GUI/StorageFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/GUI/StorageFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/GUI/StorageFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/GUI/StorageFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Storage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Breads/ABread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/Breads/ABread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Breads/Classes/SeedyBread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/Breads/Classes/SeedyBread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/GUI/MenuFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/GUI/MenuFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/GUI/MenuFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/GUI/MenuFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/GUI/StorageFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/GUI/StorageFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Storage/Classes/Storage.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/Storage/Classes/Storage.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,13 +30,21 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,6 +68,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/postgresql-42.3.4.jar" />
     <property name="project.structure.last.edited" value="Libraries" />
