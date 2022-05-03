@@ -53,6 +53,7 @@ public class LoginForm extends JFrame {
                     // iterate through the java resultset
                     if(rs.isBeforeFirst()){
                         System.out.println("siker");
+                        MenuFrame menuFrame = new MenuFrame();
                     }
                     else {
                         System.out.println("nem siker");
