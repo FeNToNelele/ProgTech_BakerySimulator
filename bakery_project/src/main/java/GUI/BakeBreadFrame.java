@@ -55,6 +55,7 @@ public class BakeBreadFrame extends JFrame {
                     switch (selectedBread) {
                         case "WhiteBread":
                             prototype = new WhiteBread(1);
+                            //ide kenyer sütéshez majd kéne valami for loop hogy a megadott számba süsse vagy ilyesmi
                             System.out.println("feher kenyer");
                             break;
                         case "FruitBread":
