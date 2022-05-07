@@ -4,6 +4,8 @@ import Breads.ABread;
 import Breads.Classes.FruitBread;
 import Breads.Classes.SeedyBread;
 import Breads.Classes.WhiteBread;
+import javax.swing.AbstractButton;
+import java.util.Enumeration;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,8 +23,8 @@ public class BakeBreadFrame extends JFrame {
     private JRadioButton rdbtnFruitBread;
     private JRadioButton rdbtnSeedyBread;
     private JLabel lblNotification;
+    private JComboBox breadCombo;
 
-    private ButtonGroup btngrpType = new ButtonGroup();
 
     public BakeBreadFrame() throws HeadlessException {
         setContentPane(bakeBreadPanel);
@@ -31,39 +33,43 @@ public class BakeBreadFrame extends JFrame {
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE); //EXIT_ON_CLOSE?
         setVisible(true);
 
-        btngrpType.add(rdbtnWhiteBread);
-        btngrpType.add(rdbtnFruitBread);
-        btngrpType.add(rdbtnSeedyBread);
+
+        breadCombo.addItem("WhiteBread");
+        breadCombo.addItem("FruitBread");
+        breadCombo.addItem("Seedy Bread");
 
         btnStart.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent bakeStart) {
+                System.out.println("Belép a factoryba");
                 //Start abstract factory
                 int amount;
                 try {
                     amount = Integer.parseInt(spnrAmount.getValue().toString());
+                    System.out.println(amount);
                     if (amount < 0) {
                         throw new Exception();
+                    }
+                    ABread prototype;
+                    String selectedBread = breadCombo.getSelectedItem().toString();
+                    switch (selectedBread) {
+                        case "WhiteBread":
+                            prototype = new WhiteBread(1);
+                            System.out.println("feher kenyer");
+                            break;
+                        case "FruitBread":
+                            prototype = new FruitBread(1);
+                            System.out.println("fruit kenyeret süt");
+                            break;
+                        case "SeedyBread":
+                            prototype = new SeedyBread(1);
+                            break;
                     }
                 }
                 catch (Exception ex) {
                     lblNotification.setText("The amount must be greater than 0.");
                     return;
                 }
-
-                ABread prototype;
-                switch (Integer.parseInt(spnrAmount.getValue().toString())) {
-                    case 0:
-                        prototype = new WhiteBread(1);
-                        break;
-                    case 1:
-                        prototype = new FruitBread(1);
-                        break;
-                    case 2:
-                        prototype = new SeedyBread(1);
-                        break;
-                }
-
 
             }
         });
