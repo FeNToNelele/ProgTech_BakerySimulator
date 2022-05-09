@@ -14,12 +14,6 @@ public class FruitBread extends ABread {
         super(id);
     }
 
-    public List<String> getFruits() {
-        return new ArrayList<>(Arrays.asList(
-                "prunes", "dried peaches", "raisins"
-        ));
-    }
-
     @Override
     public String getName() {
         return "Fruit bread";
@@ -28,14 +22,6 @@ public class FruitBread extends ABread {
     @Override
     public int getPrice() {
         return 300;
-    }
-
-    @Override
-    public List<String> getIngredients() {
-        List<String> temp = new ArrayList<>();
-        temp.addAll(super.getIngredients());
-        temp.addAll(getFruits());
-        return temp;
     }
 
     @Override

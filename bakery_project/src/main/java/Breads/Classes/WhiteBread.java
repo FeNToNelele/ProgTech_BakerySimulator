@@ -10,14 +10,6 @@ public class WhiteBread extends ABread {
         super(id);
     }
 
-    @Override
-    public List<String> getIngredients() {
-        List<String> temp = new ArrayList<>();
-        temp.addAll(super.getIngredients());
-        temp.add(getExtraFlour());
-        return temp;
-    }
-
     public String getExtraFlour() {
         return "extra white flour mix";
     }

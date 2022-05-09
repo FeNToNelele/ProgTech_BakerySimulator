@@ -24,20 +24,6 @@ public class SeedyBread extends ABread {
     }
 
     @Override
-    public List<String> getIngredients() {
-        List<String> temp = new ArrayList<>();
-        temp.addAll(super.getIngredients());
-        temp.addAll(getSeeds());
-        return temp;
-    }
-
-    public List<String> getSeeds() {
-        return new ArrayList<>(Arrays.asList(
-                "cereals", "oats", "sunflower seeds"
-        ));
-    }
-
-    @Override
     public ABread clone() {
         return new SeedyBread(this.getId());
     }

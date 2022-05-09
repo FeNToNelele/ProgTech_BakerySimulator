@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d730c1-63be-4598-a1be-9973e7037780" name="Changes" comment="" />
+    <list default="true" id="23d730c1-63be-4598-a1be-9973e7037780" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Breads/ABread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Breads/ABread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Breads/Classes/FruitBread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Breads/Classes/FruitBread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Breads/Classes/SeedyBread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Breads/Classes/SeedyBread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Breads/Classes/WhiteBread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Breads/Classes/WhiteBread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Breads/Interfaces/IIngredients.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,19 +38,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -51,7 +57,14 @@
       <recent name="Breads" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Program">
+    <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Program" />
+      <module name="bakery_project" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoggerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bakery_project" />
       <extension name="coverage">
@@ -69,6 +82,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Program" />
         <item itemvalue="JUnit.LoggerTest" />
       </list>
     </recent_temporary>
@@ -82,6 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1650458327943</updated>
       <workItem from="1650458329364" duration="3963000" />
+      <workItem from="1652084065829" duration="457000" />
     </task>
     <servers />
   </component>

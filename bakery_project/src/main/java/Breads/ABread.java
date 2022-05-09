@@ -1,12 +1,10 @@
 package Breads;
 
-import Breads.Interfaces.IIngredients;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public abstract class ABread implements Cloneable, IIngredients {
+public abstract class ABread implements Cloneable {
     public ABread(int id) {
         this.id = id;
     }
@@ -20,15 +18,6 @@ public abstract class ABread implements Cloneable, IIngredients {
 
     private int price;
     public abstract int getPrice();
-
-    List<String> ingredients;
-
-    @Override
-    public List<String> getIngredients() {
-        return new ArrayList<>(Arrays.asList(
-                "flour", "egg", "water", "yeast", "butter"
-        ));
-    }
 
     @Override
     public abstract ABread clone();
