@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ace7993-491d-45ed-9a53-8f9becd217b7" name="Changes" comment="" />
+    <list default="true" id="9ace7993-491d-45ed-9a53-8f9becd217b7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Strategies/ALog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Strategies/LogAdd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Strategies/LogError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Strategies/LogRemove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Logger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Storage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Files/LogAdd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Interfaces/IObservedSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Interfaces/IObservedSubject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Interfaces/IObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Interfaces/IObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/test/java/Storage/Classes/LoggerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/test/java/Storage/Classes/LoggerTest.java" afterDir="false" />
+    </list>
     <list id="77ae55f7-cfe5-4ebc-b726-381e0dcd123a" name="Changes by student" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +84,9 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="Breads" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Storage.Classes" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Storage.Classes" />
     </key>
@@ -136,6 +151,7 @@
       <workItem from="1650460941296" duration="2364000" />
       <workItem from="1650467942199" duration="39000" />
       <workItem from="1650554173992" duration="1772000" />
+      <workItem from="1652202466490" duration="5896000" />
     </task>
     <servers />
   </component>

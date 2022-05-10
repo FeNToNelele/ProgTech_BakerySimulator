@@ -2,6 +2,9 @@ package Storage.Interfaces;
 
 import Storage.Classes.Storage;
 
+import java.io.File;
+import java.io.IOException;
+
 public interface IObserver {
-    void log(int userId, String action, int productId);
+    void logTo(File destination) throws IOException;
 }

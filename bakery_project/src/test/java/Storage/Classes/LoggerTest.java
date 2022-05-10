@@ -12,10 +12,10 @@ class LoggerTest {
     @Rule
     public ExpectedException expectedException = ExpectedException.none();
 
-    @Test
+    /*@Test
     public void hasToThrowIOExceptionTest() {
         logger.log(1, "add", 3);
         expectedException.expect(IOException.class);
-    }
+    }*/
 
 }

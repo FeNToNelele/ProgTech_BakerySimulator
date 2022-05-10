@@ -4,6 +4,8 @@ import Breads.ABread;
 import Storage.Exceptions.BreadAlreadyExistsException;
 import Storage.Interfaces.IObserver;
 import Storage.Interfaces.IObservedSubject;
+import Storage.Strategies.LogAdd;
+import com.mysql.cj.log.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +20,7 @@ public class Storage implements IObservedSubject {
     public Storage() {
         this.observers = new ArrayList<>();
     }
+
 
     private List<IObserver> observers;
     
@@ -34,6 +37,7 @@ public class Storage implements IObservedSubject {
     public void addBread(ABread newBread) throws BreadAlreadyExistsException {
         if (!products.contains(newBread)) {
             products.add(newBread);
+            observers.notify();
         } else throw new BreadAlreadyExistsException();
     }
 
@@ -56,11 +60,7 @@ public class Storage implements IObservedSubject {
     }
 
     @Override
-    public void notifyObservers() {
-        for (int i = 0; i < observers.size(); i++) {
-            IObserver observer = observers.get(i);
-            //TODO: átadni a változásokat
-            //observer.log();
-        }
+    public void notify(IObserver observer) {
+        //observer.logTo(); //TODO: a singleton meghívása, hogy abba a fájlba írjon
     }
 }
