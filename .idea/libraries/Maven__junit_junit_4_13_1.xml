@@ -2,8 +2,6 @@
   <library name="Maven: junit:junit:4.13.1">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.13.1/junit-4.13.1.jar!/" />
-      <root url="file://$MAVEN_REPOSITORY$/junit/junit/4.13.1" />
-      <root url="file://$MAVEN_REPOSITORY$/junit/junit/4.13.1" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.13.1/junit-4.13.1-javadoc.jar!/" />
@@ -11,7 +9,5 @@
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.13.1/junit-4.13.1-sources.jar!/" />
     </SOURCES>
-    <jarDirectory url="file://$MAVEN_REPOSITORY$/junit/junit/4.13.1" recursive="false" />
-    <jarDirectory url="file://$MAVEN_REPOSITORY$/junit/junit/4.13.1" recursive="false" />
   </library>
 </component>

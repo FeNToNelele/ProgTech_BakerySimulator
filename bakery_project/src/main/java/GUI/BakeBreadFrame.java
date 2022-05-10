@@ -5,12 +5,14 @@ import Breads.Classes.FruitBread;
 import Breads.Classes.SeedyBread;
 import Breads.Classes.WhiteBread;
 import javax.swing.AbstractButton;
+import java.util.ArrayList;
 import java.util.Enumeration;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 public class BakeBreadFrame extends JFrame {
     private JLabel lblType;
@@ -38,12 +40,20 @@ public class BakeBreadFrame extends JFrame {
         breadCombo.addItem("FruitBread");
         breadCombo.addItem("Seedy Bread");
 
+        ArrayList<WhiteBread> WhiteList = new ArrayList<WhiteBread>();
+        ArrayList<FruitBread> FruitList = new ArrayList<FruitBread>();
+        ArrayList<SeedyBread> SeedyList = new ArrayList<SeedyBread>();
+
+
+
         btnStart.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent bakeStart) {
                 System.out.println("Belép a factoryba");
                 //Start abstract factory
                 int amount;
+                int ActualIndexInt;
+                String ActualIndexString;
                 try {
                     amount = Integer.parseInt(spnrAmount.getValue().toString());
                     System.out.println(amount);
@@ -54,16 +64,43 @@ public class BakeBreadFrame extends JFrame {
                     String selectedBread = breadCombo.getSelectedItem().toString();
                     switch (selectedBread) {
                         case "WhiteBread":
-                            prototype = new WhiteBread(1);
-                            //ide kenyer sütéshez majd kéne valami for loop hogy a megadott számba süsse vagy ilyesmi
-                            System.out.println("feher kenyer");
+                            ActualIndexString = WhiteList.get(WhiteList.size()-1).toString();
+                            ActualIndexInt = Integer.parseInt(ActualIndexString);
+                            amount = amount+ActualIndexInt;
+                            for (int i = ActualIndexInt; i < amount; i++) {
+                                prototype = new WhiteBread(i);
+                                WhiteList.add((WhiteBread) prototype);
+
+                            }
+                            for (WhiteBread element : WhiteList){
+                                System.out.print(element.getId()+"\n");
+                            }
                             break;
                         case "FruitBread":
-                            prototype = new FruitBread(1);
-                            System.out.println("fruit kenyeret süt");
+                            ActualIndexString = FruitList.get(FruitList.size()-1).toString();
+                            ActualIndexInt = Integer.parseInt(ActualIndexString);
+                            amount = amount+ActualIndexInt;
+                            for (int i = ActualIndexInt; i < amount; i++) {
+                                prototype = new FruitBread(i);
+                                FruitList.add((FruitBread) prototype);
+
+                            }
+                            for (FruitBread element : FruitList){
+                                System.out.print(element.getId()+"\n");
+                            }
                             break;
                         case "SeedyBread":
-                            prototype = new SeedyBread(1);
+                            ActualIndexString = SeedyList.get(SeedyList.size()-1).toString();
+                            ActualIndexInt = Integer.parseInt(ActualIndexString);
+                            amount = amount+ActualIndexInt;
+                            for (int i = ActualIndexInt; i < amount; i++) {
+                                prototype = new SeedyBread(i);
+                                SeedyList.add((SeedyBread) prototype);
+
+                            }
+                            for (SeedyBread element : SeedyList){
+                                System.out.print(element.getId()+"\n");
+                            }
                             break;
                     }
                 }
