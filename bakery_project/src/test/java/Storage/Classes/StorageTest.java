@@ -6,19 +6,26 @@ import org.junit.Rule;
 import org.junit.jupiter.api.Test;
 import org.junit.rules.ExpectedException;
 
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import java.io.IOException;
+
 class StorageTest {
     Storage target = new Storage();
 
-    @Rule
-    ExpectedException expectedException = ExpectedException.none();
-
     @Test
-    public void addBread_addSameElementsTest() throws BreadAlreadyExistsException {
+    public void addBread_addSameElementsTest() throws BreadAlreadyExistsException, IOException {
         FruitBread sampleBread = new FruitBread(1);
 
         target.addBread(sampleBread);
-        target.addBread(sampleBread);
 
-        expectedException.expect(BreadAlreadyExistsException.class);
+        BreadAlreadyExistsException thrown = assertThrows(
+                BreadAlreadyExistsException.class,
+                () -> target.addBread(sampleBread),
+                "Bread already exists."
+        );
+
+        assertTrue(thrown.getMessage().contains("exists"));
     }
 }
