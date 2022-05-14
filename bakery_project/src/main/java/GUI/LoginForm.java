@@ -1,12 +1,16 @@
 package GUI;
 
 import javax.swing.*;
+import javax.swing.plaf.FontUIResource;
+import javax.swing.text.StyleContext;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Locale;
 
 public class LoginForm extends JFrame {
     private JLabel lblLogin;
@@ -23,12 +27,15 @@ public class LoginForm extends JFrame {
         setSize(350, 500);
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setVisible(true);
+
+        //Itt van az aktuális user indexe eltárolva!!!
+        String[] ActualUserIndex = new String[1];
+
         btnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                try
-                {
+                try {
                     // create our mysql database connection
                     String myDriver = "com.mysql.jdbc.Driver";
                     String myUrl = "jdbc:mysql://localhost:3306/bakery";
@@ -51,24 +58,23 @@ public class LoginForm extends JFrame {
                     ResultSet rs = st.executeQuery(query);
 
                     // iterate through the java resultset
-                    if(rs.isBeforeFirst()){
+                    if (rs.isBeforeFirst()) {
                         System.out.println("siker");
+                        rs.next();
+                        System.out.println(rs.getString(1));
+                        ActualUserIndex[0] = rs.getString(1);
                         MenuFrame menuFrame = new MenuFrame();
-                    }
-                    else {
+                    } else {
                         System.out.println("nem siker");
                     }
                     st.close();
-                }
-                catch (Exception ex)
-                {
+                } catch (Exception ex) {
                     System.err.println("Got an exception! ");
                     System.err.println(ex.getMessage());
                 }
             }
         });
     }
-
 
 
 }

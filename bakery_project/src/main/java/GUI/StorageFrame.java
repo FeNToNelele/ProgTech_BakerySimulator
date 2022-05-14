@@ -4,14 +4,18 @@ import Breads.ABread;
 import Storage.Classes.Storage;
 
 import javax.swing.*;
+import javax.swing.plaf.FontUIResource;
 import javax.swing.table.JTableHeader;
+import javax.swing.text.StyleContext;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Locale;
 
 public class StorageFrame extends JFrame {
     private JPanel storagePanel;
 
-    String[] columns = new String[] {
+    String[] columns = new String[]{
             "Id", "Name", "Price"
     };
     Object[][] data = {
@@ -45,4 +49,5 @@ public class StorageFrame extends JFrame {
             }
         });
     }
+
 }

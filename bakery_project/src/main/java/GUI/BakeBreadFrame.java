@@ -38,7 +38,7 @@ public class BakeBreadFrame extends JFrame {
 
         breadCombo.addItem("WhiteBread");
         breadCombo.addItem("FruitBread");
-        breadCombo.addItem("Seedy Bread");
+        breadCombo.addItem("SeedyBread");
 
         ArrayList<WhiteBread> WhiteList = new ArrayList<WhiteBread>();
         ArrayList<FruitBread> FruitList = new ArrayList<FruitBread>();
@@ -49,23 +49,25 @@ public class BakeBreadFrame extends JFrame {
         btnStart.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent bakeStart) {
-                System.out.println("Belép a factoryba");
+                System.out.println("Enters the factory");
                 //Start abstract factory
                 int amount;
                 int ActualIndexInt;
                 String ActualIndexString;
+
                 try {
                     amount = Integer.parseInt(spnrAmount.getValue().toString());
-                    System.out.println(amount);
                     if (amount < 0) {
+                        System.out.println("Error");
                         throw new Exception();
                     }
+                    System.out.println("the amount of bread: " + amount);
                     ABread prototype;
                     String selectedBread = breadCombo.getSelectedItem().toString();
                     switch (selectedBread) {
                         case "WhiteBread":
-                            ActualIndexString = WhiteList.get(WhiteList.size()-1).toString();
-                            ActualIndexInt = Integer.parseInt(ActualIndexString);
+                            System.out.println("Baking white Bread");
+                            ActualIndexInt = WhiteList.size();
                             amount = amount+ActualIndexInt;
                             for (int i = ActualIndexInt; i < amount; i++) {
                                 prototype = new WhiteBread(i);
@@ -74,11 +76,14 @@ public class BakeBreadFrame extends JFrame {
                             }
                             for (WhiteBread element : WhiteList){
                                 System.out.print(element.getId()+"\n");
+
                             }
+                            System.out.println("----White Bread Index list----");
+                            System.out.println("------------------------------");
                             break;
                         case "FruitBread":
-                            ActualIndexString = FruitList.get(FruitList.size()-1).toString();
-                            ActualIndexInt = Integer.parseInt(ActualIndexString);
+                            System.out.println("Baking Fruit Bread");
+                            ActualIndexInt = FruitList.size();
                             amount = amount+ActualIndexInt;
                             for (int i = ActualIndexInt; i < amount; i++) {
                                 prototype = new FruitBread(i);
@@ -87,11 +92,14 @@ public class BakeBreadFrame extends JFrame {
                             }
                             for (FruitBread element : FruitList){
                                 System.out.print(element.getId()+"\n");
+
                             }
+                            System.out.println("----Fruit Bread Index list----");
+                            System.out.println("------------------------------");
                             break;
                         case "SeedyBread":
-                            ActualIndexString = SeedyList.get(SeedyList.size()-1).toString();
-                            ActualIndexInt = Integer.parseInt(ActualIndexString);
+                            System.out.println("Baking Seedy Bread");
+                            ActualIndexInt = SeedyList.size();
                             amount = amount+ActualIndexInt;
                             for (int i = ActualIndexInt; i < amount; i++) {
                                 prototype = new SeedyBread(i);
@@ -100,7 +108,10 @@ public class BakeBreadFrame extends JFrame {
                             }
                             for (SeedyBread element : SeedyList){
                                 System.out.print(element.getId()+"\n");
+
                             }
+                            System.out.println("----Seedy Bread Index list----");
+                            System.out.println("------------------------------");
                             break;
                     }
                 }
