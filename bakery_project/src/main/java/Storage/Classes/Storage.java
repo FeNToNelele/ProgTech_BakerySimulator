@@ -3,24 +3,33 @@ package Storage.Classes;
 import Breads.ABread;
 import Storage.Exceptions.BreadAlreadyExistsException;
 import Storage.Interfaces.IObserver;
-import Storage.Interfaces.IObservedSubject;
-import Storage.Strategies.LogAdd;
-import com.mysql.cj.log.Log;
+import Storage.Interfaces.ISubject;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-public class Storage implements IObservedSubject {
+public class Storage implements ISubject {
+    public Storage() {
+        this.products = new ArrayList<>();
+        this.observers = new ArrayList<>();
+    }
+
+    private int userid;
+
+    public int getUserid() {
+        return userid;
+    }
+
+    public void setUserid(int userid) {
+        this.userid = userid;
+    }
+
     private static int ID = 1;
     public static int getID() {
         return ID++;
     }
-
-    public Storage() {
-        this.observers = new ArrayList<>();
-    }
-
 
     private List<IObserver> observers;
     
@@ -34,10 +43,10 @@ public class Storage implements IObservedSubject {
         return temp;
     }
 
-    public void addBread(ABread newBread) throws BreadAlreadyExistsException {
+    public void addBread(ABread newBread) throws BreadAlreadyExistsException, IOException {
         if (!products.contains(newBread)) {
             products.add(newBread);
-            observers.notify();
+            notifyObservers(new ArrayList<>(), this.getUserid(), newBread.getId());
         } else throw new BreadAlreadyExistsException();
     }
 
@@ -60,7 +69,9 @@ public class Storage implements IObservedSubject {
     }
 
     @Override
-    public void notify(IObserver observer) {
-        //observer.logTo(); //TODO: a singleton meghívása, hogy abba a fájlba írjon
+    public void notifyObservers(List<IObserver> observers, int userid, int productid) throws IOException {
+        for (IObserver observer : observers) {
+            observer.updateFields(userid, productid);
+        }
     }
 }
