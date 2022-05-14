@@ -11,7 +11,7 @@ public class WhiteBreadBakery extends ABakery{
     public List<ABread> bake(int amount) {
         List<ABread> whiteBreads = new ArrayList<>();
         for (int i = 0; i < amount; i++) {
-            whiteBreads.add(new WhiteBread(storage.getID()));
+            whiteBreads.add(new WhiteBread());
         }
         return whiteBreads;
     }

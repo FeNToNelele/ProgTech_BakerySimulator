@@ -5,6 +5,7 @@ import Breads.Classes.FruitBread;
 import Breads.Classes.SeedyBread;
 import Breads.Classes.WhiteBread;
 import Storage.Classes.Storage;
+import Storage.Exceptions.BreadAlreadyExistsException;
 import Storage.Strategies.LogAdd;
 import Storage.Strategies.LogError;
 import Storage.Strategies.LogRemove;
@@ -48,9 +49,6 @@ public class BakeBreadFrame extends JFrame {
         breadCombo.addItem("FruitBread");
         breadCombo.addItem("SeedyBread");
 
-        ArrayList<WhiteBread> WhiteList = new ArrayList<WhiteBread>();
-        ArrayList<FruitBread> FruitList = new ArrayList<FruitBread>();
-        ArrayList<SeedyBread> SeedyList = new ArrayList<SeedyBread>();
 
         initializeObservers();
 
@@ -60,9 +58,6 @@ public class BakeBreadFrame extends JFrame {
                 System.out.println("Enters the factory");
                 //Start abstract factory
                 int amount;
-                int ActualIndexInt;
-                String ActualIndexString;
-
                 try {
                     amount = Integer.parseInt(spnrAmount.getValue().toString());
                     if (amount < 0) {
@@ -76,7 +71,21 @@ public class BakeBreadFrame extends JFrame {
                     switch (selectedBread) {
                         case "WhiteBread":
                             System.out.println("Baking white Bread");
-                            /*ActualIndexInt = storage.;
+                            for (int i = 0; i < amount; i++) {
+                                prototype = new WhiteBread();
+                                try {
+                                    storage.addBread(prototype);
+                                } catch (BreadAlreadyExistsException e) {
+                                    e.printStackTrace();
+                                }
+
+                            }
+                            /*List<ABread> ActualBreads = storage.getProducts();
+                            for (ABread element : ActualBreads){
+                                System.out.println(element.getId()+"\n");
+                            }
+
+                            ActualIndexInt = storage.;
                             amount = amount+ActualIndexInt;
                             for (int i = ActualIndexInt; i < amount; i++) {
                                 prototype = new WhiteBread();
@@ -88,44 +97,37 @@ public class BakeBreadFrame extends JFrame {
                                 }
 
                             }*/
-                            for (WhiteBread element : WhiteList){
+                            /*for (WhiteBread element : WhiteList){
                                 System.out.print(element.getId()+"\n");
 
                             }
+
+                             */
                             System.out.println("----White Bread Index list----");
                             System.out.println("------------------------------");
                             break;
                         case "FruitBread":
-                            System.out.println("Baking Fruit Bread");
-                            ActualIndexInt = FruitList.size();
-                            amount = amount+ActualIndexInt;
-                            for (int i = ActualIndexInt; i < amount; i++) {
-                                prototype = new FruitBread(i);
-                                FruitList.add((FruitBread) prototype);
-
+                            System.out.println("Baking white Bread");
+                            for (int i = 0; i < amount; i++) {
+                                prototype = new FruitBread();
+                                try {
+                                    storage.addBread(prototype);
+                                } catch (BreadAlreadyExistsException e) {
+                                    e.printStackTrace();
+                                }
                             }
-                            for (FruitBread element : FruitList){
-                                System.out.print(element.getId()+"\n");
 
-                            }
-                            System.out.println("----Fruit Bread Index list----");
-                            System.out.println("------------------------------");
                             break;
                         case "SeedyBread":
-                            System.out.println("Baking Seedy Bread");
-                            ActualIndexInt = SeedyList.size();
-                            amount = amount+ActualIndexInt;
-                            for (int i = ActualIndexInt; i < amount; i++) {
-                                prototype = new SeedyBread(i);
-                                SeedyList.add((SeedyBread) prototype);
-
+                            System.out.println("Baking white Bread");
+                            for (int i = 0; i < amount; i++) {
+                                prototype = new SeedyBread();
+                                try {
+                                    storage.addBread(prototype);
+                                } catch (BreadAlreadyExistsException e) {
+                                    e.printStackTrace();
+                                }
                             }
-                            for (SeedyBread element : SeedyList){
-                                System.out.print(element.getId()+"\n");
-
-                            }
-                            System.out.println("----Seedy Bread Index list----");
-                            System.out.println("------------------------------");
                             break;
                     }
                 }

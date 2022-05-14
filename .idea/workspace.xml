@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ace7993-491d-45ed-9a53-8f9becd217b7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/ABread.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/ABread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/Classes/FruitBread.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/Classes/FruitBread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/Classes/SeedyBread.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/Classes/SeedyBread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/Classes/WhiteBread.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/Classes/WhiteBread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/GUI/BakeBreadFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/GUI/BakeBreadFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Storage.java" afterDir="false" />
-    </list>
+    <list default="true" id="9ace7993-491d-45ed-9a53-8f9becd217b7" name="Changes" comment="" />
     <list id="77ae55f7-cfe5-4ebc-b726-381e0dcd123a" name="Changes by student" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +82,7 @@
       <recent name="Storage.Classes" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StorageTest.addBread_addSameElementsTest">
+  <component name="RunManager" selected="Application.Program">
     <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Program" />
       <module name="bakery_project" />
@@ -147,9 +139,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Program" />
         <item itemvalue="JUnit.StorageTest.addBread_addSameElementsTest" />
         <item itemvalue="JUnit.StorageTest" />
-        <item itemvalue="Application.Program" />
         <item itemvalue="JUnit.LoggerTest.hasToThrowIOExceptionTest" />
       </list>
     </recent_temporary>

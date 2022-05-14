@@ -11,7 +11,7 @@ public class SeedyBreadBakery extends ABakery {
     public List<ABread> bake(int amount) {
         List<ABread> seedyBreads = new ArrayList<>();
         for (int i = 0; i < amount; i++) {
-            seedyBreads.add(new SeedyBread(storage.getID()));
+            seedyBreads.add(new SeedyBread());
         }
         return  seedyBreads;
     }

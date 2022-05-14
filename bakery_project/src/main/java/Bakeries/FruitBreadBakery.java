@@ -11,7 +11,7 @@ public class FruitBreadBakery extends ABakery {
     public List<ABread> bake(int amount) {
         List<ABread> fruitBreads = new ArrayList<>();
         for (int i = 0; i < amount; i++) {
-            fruitBreads.add(new FruitBread(storage.getID()));
+            fruitBreads.add(new FruitBread());
         }
         return fruitBreads;
     }
