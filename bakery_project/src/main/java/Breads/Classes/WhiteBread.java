@@ -7,7 +7,7 @@ import java.util.List;
 
 public class WhiteBread extends ABread {
     public WhiteBread(int id) {
-        super(id);
+        super(id, "White bread", 260);
     }
 
     public String getExtraFlour() {

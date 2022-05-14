@@ -10,17 +10,7 @@ import java.util.List;
 public class SeedyBread extends ABread {
 
     public SeedyBread(int id) {
-        super(id);
-    }
-
-    @Override
-    public String getName() {
-        return "Seedy bread";
-    }
-
-    @Override
-    public int getPrice() {
-        return 320;
+        super(id, "Seedy bread", 320);
     }
 
     @Override

@@ -11,17 +11,7 @@ import java.util.List;
 public class FruitBread extends ABread {
 
     public FruitBread(int id) {
-        super(id);
-    }
-
-    @Override
-    public String getName() {
-        return "Fruit bread";
-    }
-
-    @Override
-    public int getPrice() {
-        return 300;
+        super(id, "Fruit bread", 300);
     }
 
     @Override
