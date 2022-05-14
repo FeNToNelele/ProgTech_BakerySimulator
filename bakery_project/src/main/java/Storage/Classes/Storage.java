@@ -44,7 +44,6 @@ public class Storage implements ISubject {
     public void addBread(ABread newBread) throws BreadAlreadyExistsException, IOException {
         if (!products.contains(newBread)) {
             products.add(newBread);
-            notifyObservers(new ArrayList<IObserver>(), this.getUserid(), newBread.getId());
         } else throw new BreadAlreadyExistsException();
     }
 

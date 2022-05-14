@@ -16,7 +16,7 @@ class StorageTest {
 
     @Test
     public void addBread_addSameElementsTest() throws BreadAlreadyExistsException, IOException {
-        FruitBread sampleBread = new FruitBread(1);
+        FruitBread sampleBread = new FruitBread();
 
         target.addBread(sampleBread);
 
