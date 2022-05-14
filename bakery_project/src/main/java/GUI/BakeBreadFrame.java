@@ -6,6 +6,7 @@ import Breads.Classes.SeedyBread;
 import Breads.Classes.WhiteBread;
 import Storage.Classes.Storage;
 import Storage.Exceptions.BreadAlreadyExistsException;
+import Storage.Interfaces.IObserver;
 import Storage.Strategies.LogAdd;
 import Storage.Strategies.LogError;
 import Storage.Strategies.LogRemove;
@@ -36,8 +37,10 @@ public class BakeBreadFrame extends JFrame {
     private JComboBox breadCombo;
 
     static Storage storage = new Storage();
+    private int userId;
 
-    public BakeBreadFrame() throws HeadlessException {
+    public BakeBreadFrame(int userId) throws HeadlessException {
+        this.userId = userId;
         setContentPane(bakeBreadPanel);
         setTitle("Give order");
         setSize(350, 500);
@@ -48,7 +51,6 @@ public class BakeBreadFrame extends JFrame {
         breadCombo.addItem("WhiteBread");
         breadCombo.addItem("FruitBread");
         breadCombo.addItem("SeedyBread");
-
 
         initializeObservers();
 
@@ -75,6 +77,10 @@ public class BakeBreadFrame extends JFrame {
                                 prototype = new WhiteBread();
                                 try {
                                     storage.addBread(prototype);
+                                    storage.notifyObservers(
+                                            storage.getObservers().stream()
+                                                    .filter(x -> x instanceof LogAdd).toList(), userId, prototype.getId()
+                                    );
                                 } catch (BreadAlreadyExistsException e) {
                                     e.printStackTrace();
                                 }
@@ -141,9 +147,6 @@ public class BakeBreadFrame extends JFrame {
     }
 
     public void initializeObservers() {
-        LogAdd logAdd = new LogAdd();
-        LogRemove logRemove = new LogRemove();
-        LogError logError = new LogError();
         storage.registerObserver(new LogAdd());
         storage.registerObserver(new LogRemove());
         storage.registerObserver(new LogError());
