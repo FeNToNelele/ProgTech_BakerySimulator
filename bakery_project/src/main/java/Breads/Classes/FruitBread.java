@@ -10,12 +10,12 @@ import java.util.List;
 
 public class FruitBread extends ABread {
 
-    public FruitBread(int id) {
-        super(id, "Fruit bread", 300);
+    public FruitBread() {
+        super("Fruit bread", 300);
     }
 
     @Override
     public ABread clone() {
-        return new FruitBread(this.getId());
+        return new FruitBread();
     }
 }

@@ -9,12 +9,12 @@ import java.util.List;
 
 public class SeedyBread extends ABread {
 
-    public SeedyBread(int id) {
-        super(id, "Seedy bread", 320);
+    public SeedyBread() {
+        super("Seedy bread", 320);
     }
 
     @Override
     public ABread clone() {
-        return new SeedyBread(this.getId());
+        return new SeedyBread();
     }
 }

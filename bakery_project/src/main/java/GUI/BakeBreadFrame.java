@@ -4,6 +4,12 @@ import Breads.ABread;
 import Breads.Classes.FruitBread;
 import Breads.Classes.SeedyBread;
 import Breads.Classes.WhiteBread;
+import Storage.Classes.Storage;
+import Storage.Strategies.LogAdd;
+import Storage.Strategies.LogError;
+import Storage.Strategies.LogRemove;
+import com.mysql.cj.log.Log;
+
 import javax.swing.AbstractButton;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -13,6 +19,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class BakeBreadFrame extends JFrame {
     private JLabel lblType;
@@ -27,6 +34,7 @@ public class BakeBreadFrame extends JFrame {
     private JLabel lblNotification;
     private JComboBox breadCombo;
 
+    static Storage storage = new Storage();
 
     public BakeBreadFrame() throws HeadlessException {
         setContentPane(bakeBreadPanel);
@@ -44,7 +52,7 @@ public class BakeBreadFrame extends JFrame {
         ArrayList<FruitBread> FruitList = new ArrayList<FruitBread>();
         ArrayList<SeedyBread> SeedyList = new ArrayList<SeedyBread>();
 
-
+        initializeObservers();
 
         btnStart.addActionListener(new ActionListener() {
             @Override
@@ -64,16 +72,22 @@ public class BakeBreadFrame extends JFrame {
                     System.out.println("the amount of bread: " + amount);
                     ABread prototype;
                     String selectedBread = breadCombo.getSelectedItem().toString();
+
                     switch (selectedBread) {
                         case "WhiteBread":
                             System.out.println("Baking white Bread");
-                            ActualIndexInt = WhiteList.size();
+                            /*ActualIndexInt = storage.;
                             amount = amount+ActualIndexInt;
                             for (int i = ActualIndexInt; i < amount; i++) {
-                                prototype = new WhiteBread(i);
-                                WhiteList.add((WhiteBread) prototype);
+                                prototype = new WhiteBread();
+                                try {
+                                    storage.addBread(prototype);
+                                }
+                                catch (BreadAlreadyExistsException e){
+                                    return;
+                                }
 
-                            }
+                            }*/
                             for (WhiteBread element : WhiteList){
                                 System.out.print(element.getId()+"\n");
 
@@ -122,5 +136,14 @@ public class BakeBreadFrame extends JFrame {
 
             }
         });
+    }
+
+    public void initializeObservers() {
+        LogAdd logAdd = new LogAdd();
+        LogRemove logRemove = new LogRemove();
+        LogError logError = new LogError();
+        storage.registerObserver(new LogAdd());
+        storage.registerObserver(new LogRemove());
+        storage.registerObserver(new LogError());
     }
 }

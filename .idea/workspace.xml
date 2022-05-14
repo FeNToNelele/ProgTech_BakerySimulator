@@ -4,38 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ace7993-491d-45ed-9a53-8f9becd217b7" name="Changes" comment="" />
     <list default="true" id="9ace7993-491d-45ed-9a53-8f9becd217b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/FileCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/ABread.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/ABread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/Classes/FruitBread.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/Classes/FruitBread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/Classes/SeedyBread.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/Classes/SeedyBread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/Classes/WhiteBread.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Breads/Classes/WhiteBread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Logger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/GUI/BakeBreadFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/GUI/BakeBreadFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Classes/Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Exceptions/BreadAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Exceptions/BreadAlreadyExistsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Interfaces/IObservedSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Interfaces/ISubject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Interfaces/IObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Interfaces/IObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Strategies/ALog.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Strategies/ALog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Strategies/LogAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Strategies/LogAdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Strategies/LogError.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Strategies/LogError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Strategies/LogRemove.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/main/java/Storage/Strategies/LogRemove.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/test/java/Storage/Classes/LoggerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/test/java/Storage/Classes/LoggerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/src/test/java/Storage/Classes/StorageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/src/test/java/Storage/Classes/StorageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Breads/ABread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/Breads/ABread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Breads/Classes/FruitBread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/Breads/Classes/FruitBread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Breads/Classes/SeedyBread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/Breads/Classes/SeedyBread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Breads/Classes/WhiteBread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/Breads/Classes/WhiteBread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/GUI/BakeBreadFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/GUI/BakeBreadFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/GUI/LoginForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/GUI/LoginForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/GUI/MenuFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/GUI/MenuFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/GUI/StorageFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/GUI/StorageFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Storage/Classes/Logger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Storage/Classes/Storage.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/Storage/Classes/Storage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Storage/Exceptions/BreadAlreadyExistsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/Storage/Exceptions/BreadAlreadyExistsException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Storage/Interfaces/IObservedSubject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bakery_project/target/classes/Storage/Interfaces/IObserver.class" beforeDir="false" afterPath="$PROJECT_DIR$/bakery_project/target/classes/Storage/Interfaces/IObserver.class" afterDir="false" />
     </list>
     <list id="77ae55f7-cfe5-4ebc-b726-381e0dcd123a" name="Changes by student" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,6 +173,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

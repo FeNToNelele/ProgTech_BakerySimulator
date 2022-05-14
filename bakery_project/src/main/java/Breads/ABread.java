@@ -5,8 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public abstract class ABread implements Cloneable {
-    public ABread(int id, String name, int price) {
-        this.id = id;
+    protected static int ID = 1;
+
+    public ABread(String name, int price) {
+        this.id = ID++;
         this.setName(name);
         this.setPrice(price);
     }
