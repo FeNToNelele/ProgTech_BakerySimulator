@@ -76,7 +76,10 @@ public class BakeBreadFrame extends JFrame {
                             for (int i = 0; i < amount; i++) {
                                 prototype = new WhiteBread();
                                 try {
+
                                     storage.addBread(prototype);
+                                    List<IObserver> test = storage.getObservers().stream().filter(x -> x instanceof LogAdd).toList();
+                                    System.out.println(test.size());
                                     storage.notifyObservers(
                                             storage.getObservers().stream()
                                                     .filter(x -> x instanceof LogAdd).toList(), userId, prototype.getId()

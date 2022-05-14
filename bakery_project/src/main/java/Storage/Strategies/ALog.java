@@ -47,6 +47,7 @@ public abstract class ALog implements IObserver {
     public void updateFields(int userid, int productid) throws IOException {
         this.setUserid(userid);
         this.setProductid(productid);
+        log();
     }
 
     public abstract void log();
