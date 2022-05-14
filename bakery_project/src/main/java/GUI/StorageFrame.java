@@ -27,9 +27,12 @@ public class StorageFrame extends JFrame {
     private JTable tblData;
     private JScrollPane scrollPaneTblData;
 
+    private int userId;
+
     private Storage storage = new Storage();
 
-    public StorageFrame() {
+    public StorageFrame(int userId) {
+        this.userId = userId;
         setContentPane(storagePanel);
 
         scrollPaneTblData = new JScrollPane(tblData);
@@ -45,7 +48,7 @@ public class StorageFrame extends JFrame {
         btnBakeBreads.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                BakeBreadFrame bakeBreadFrame = new BakeBreadFrame();
+                BakeBreadFrame bakeBreadFrame = new BakeBreadFrame(userId);
             }
         });
     }

@@ -29,7 +29,7 @@ public class LoginForm extends JFrame {
         setVisible(true);
 
         //Itt van az aktuális user indexe eltárolva!!!
-        String[] ActualUserIndex = new String[1];
+        String[] actualUserIndex = new String[1];
 
         btnLogin.addActionListener(new ActionListener() {
             @Override
@@ -62,8 +62,8 @@ public class LoginForm extends JFrame {
                         System.out.println("siker");
                         rs.next();
                         System.out.println(rs.getString(1));
-                        ActualUserIndex[0] = rs.getString(1);
-                        MenuFrame menuFrame = new MenuFrame();
+                        actualUserIndex[0] = rs.getString(1);
+                        MenuFrame menuFrame = new MenuFrame(Integer.parseInt(actualUserIndex[0]));
                     } else {
                         System.out.println("nem siker");
                     }

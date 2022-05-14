@@ -1,18 +1,17 @@
 package GUI;
 
 import javax.swing.*;
-import javax.swing.plaf.FontUIResource;
-import javax.swing.text.StyleContext;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Locale;
 
 public class MenuFrame extends JFrame {
     private JButton btnCheckStorage;
     private JPanel menuPanel;
 
-    public MenuFrame() {
+    private int userId;
+    public MenuFrame(int userId) {
+        this.userId = userId;
+
         setContentPane(menuPanel);
         setTitle("Menu");
         setSize(350, 500);
@@ -21,7 +20,7 @@ public class MenuFrame extends JFrame {
         btnCheckStorage.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                StorageFrame storageFrame = new StorageFrame();
+                StorageFrame storageFrame = new StorageFrame(userId);
             }
         });
     }
