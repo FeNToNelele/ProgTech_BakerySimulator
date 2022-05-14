@@ -2,58 +2,52 @@ package Storage.Strategies;
 
 import Storage.Interfaces.IObserver;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public abstract class ALog implements IObserver {
-    private int userId;
-
-    public int getUserId() {
-        return userId;
+    protected ALog(String name) {
+        this.name = name;
     }
 
-    private void setUserId(int userId) {
-        this.userId = userId;
+    private String name;
+
+    public String getName() {
+        return name;
     }
 
-    public int getProductId() {
-        return productId;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    private void setProductId(int productId) {
-        this.productId = productId;
+    private int userid;
+    private int productid;
+
+    public int getUserid() {
+        return userid;
     }
 
-    public String getMethod() {
-        return method;
+    public void setUserid(int userid) {
+        this.userid = userid;
     }
 
-    private void setMethod(String method) {
-        this.method = method;
+    public int getProductid() {
+        return productid;
     }
 
-    private int productId;
-    private String method;
-
-    public ALog(int userId, int productId) {
-        this.setUserId(userId);
-        this.setProductId(productId);
+    public void setProductid(int productid) {
+        this.productid = productid;
     }
 
-    public ALog(int userId, int productId, String method)
-    {
-        this.setUserId(userId);
-        this.setProductId(productId);
-        this.setMethod(method);
-    }
-
-    protected DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-    protected LocalDateTime now;
-    protected FileWriter myWriter;
+    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+    LocalDateTime now = LocalDateTime.now();
 
     @Override
-    public abstract void logTo(File destination) throws IOException;
+    public void updateFields(int userid, int productid) throws IOException {
+        this.setUserid(userid);
+        this.setProductid(productid);
+    }
+
+    public abstract void log();
 }

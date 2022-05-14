@@ -1,22 +1,29 @@
 package Storage.Strategies;
 
+import Storage.Classes.FileCreator;
+import Storage.Interfaces.IObserver;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class LogRemove extends ALog {
-    public LogRemove(int userId, int productId) {
-        super(userId, productId);
-    }
 
     @Override
-    public void logTo(File destination) throws IOException {
-        dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-        now = LocalDateTime.now();
-        myWriter = new FileWriter(destination, true);
-        myWriter.write(String.format("%s removed %s at %s", this.getUserId(), this.getProductId(), now));
-        myWriter.close();
+    public void log() {
+        FileCreator fileCreator = new FileCreator("logRemove.txt");
+        try {
+            FileWriter myWriter = new FileWriter(fileCreator.getFilename(), true);
+            myWriter.write(String.format("%s removed %s from the list at %s", this.getUserid(), this.getProductid(), now = LocalDateTime.now()));
+            myWriter.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+
+    public LogRemove() {
+        super("logRemove");
     }
 }
