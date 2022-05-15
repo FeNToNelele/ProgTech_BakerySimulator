@@ -1,9 +1,7 @@
 package Storage.Strategies;
 
 import Storage.Classes.FileCreator;
-import Storage.Interfaces.IObserver;
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;

@@ -16,16 +16,6 @@ public class Storage implements ISubject {
         this.observers = new ArrayList<>();
     }
 
-    private int userid;
-
-    public int getUserid() {
-        return userid;
-    }
-
-    public void setUserid(int userid) {
-        this.userid = userid;
-    }
-
     private List<IObserver> observers;
     public List<IObserver> getObservers() {
         return observers;
