@@ -14,7 +14,7 @@ public abstract class ABakery {
         this.userId = userId;
     }
 
-    protected Storage storage;
+    public Storage storage = new Storage();
 
     public void setPrototype(ABread prototype) {
         this.prototype = prototype;

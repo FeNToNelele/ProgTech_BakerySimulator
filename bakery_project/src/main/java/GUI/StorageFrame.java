@@ -28,14 +28,12 @@ public class StorageFrame extends JFrame {
     private JLabel lblType;
     private JLabel lblAmount;
 
-
-    private static Storage storage = new Storage();
     private int userId;
     private ABakery bakery;
 
     public StorageFrame(int userId) {
         this.userId = userId;
-        initializeObservers();
+        initializeObservers(this.bakery);
         initializeGUI();
 
         btnStart.addActionListener(new ActionListener() {
@@ -79,10 +77,10 @@ public class StorageFrame extends JFrame {
             }
         });
     }
-    public static void initializeObservers() {
-        storage.registerObserver(new LogAdd());
-        storage.registerObserver(new LogRemove());
-        storage.registerObserver(new LogError());
+    public static void initializeObservers(ABakery bakery) {
+        bakery.storage.registerObserver(new LogAdd());
+        bakery.storage.registerObserver(new LogRemove());
+        bakery.storage.registerObserver(new LogError());
     }
 
     private void initializeGUI() {
