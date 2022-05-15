@@ -14,11 +14,12 @@ public class LogError extends ALog {
         FileCreator fileCreator = new FileCreator("logError.txt");
         try {
             FileWriter myWriter = new FileWriter(fileCreator.getFilename(), true);
-            myWriter.write(String.format("%s added %s at %s", this.getUserid(), this.getProductid(), now = LocalDateTime.now()));
+            myWriter.write(String.format("User %s got into an error at %s", this.getUserid(), now = LocalDateTime.now()));
             myWriter.close();
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
+            return;
         }
     }
 
