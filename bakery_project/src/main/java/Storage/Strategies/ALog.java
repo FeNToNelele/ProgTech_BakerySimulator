@@ -50,5 +50,7 @@ public abstract class ALog implements IObserver {
         log();
     }
 
+
+
     public abstract void log();
 }
