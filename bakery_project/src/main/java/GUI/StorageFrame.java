@@ -33,6 +33,7 @@ public class StorageFrame extends JFrame {
 
     public StorageFrame(int userId) {
         this.userId = userId;
+        bakery = new WhiteBreadBakery(new WhiteBread(),userId);
         initializeObservers(this.bakery);
         initializeGUI();
 
