@@ -7,20 +7,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public abstract class ALog implements IObserver {
-    protected ALog(String name) {
-        this.name = name;
-    }
-
-    private String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     private int userid;
     private int productid;
 
