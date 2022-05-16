@@ -56,9 +56,9 @@ public class Storage implements ISubject {
     }
 
     @Override
-    public void notifyObservers(List<IObserver> observers, int userid, int productid) throws IOException {
+    public void notifyObservers(List<IObserver> observers, int userid, String breadType) throws IOException {
         for (IObserver observer : observers) {
-            observer.updateFields(userid, productid);
+            observer.updateFields(userid, breadType);
         }
     }
 }

@@ -11,7 +11,7 @@ public class FileCreator {
     }
 
     public void setFilename(String filename) {
-        this.setFilename(filename);
+        this.filename = filename;
     }
 
     public FileCreator(String filename) {

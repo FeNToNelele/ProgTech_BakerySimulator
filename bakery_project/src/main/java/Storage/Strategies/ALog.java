@@ -8,7 +8,8 @@ import java.time.format.DateTimeFormatter;
 
 public abstract class ALog implements IObserver {
     private int userid;
-    private int productid;
+
+    private String breadType;
 
     public int getUserid() {
         return userid;
@@ -18,21 +19,21 @@ public abstract class ALog implements IObserver {
         this.userid = userid;
     }
 
-    public int getProductid() {
-        return productid;
+    public String getBreadType() {
+        return breadType;
     }
 
-    public void setProductid(int productid) {
-        this.productid = productid;
+    public void setBreadType(String breadType) {
+        this.breadType = breadType;
     }
 
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
     LocalDateTime now = LocalDateTime.now();
 
     @Override
-    public void updateFields(int userid, int productid) throws IOException {
+    public void updateFields(int userid, String breadType) throws IOException {
         this.setUserid(userid);
-        this.setProductid(productid);
+        this.setBreadType(breadType);
         log();
     }
 

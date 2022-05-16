@@ -12,7 +12,7 @@ public class LogAdd extends ALog {
         FileCreator fileCreator = new FileCreator("logAdd.txt");
         try {
             FileWriter myWriter = new FileWriter(fileCreator.getFilename(), true);
-            myWriter.write(String.format("User %s added %s at %s\n", this.getUserid(), this.getProductid(), now = LocalDateTime.now()));
+            myWriter.write(String.format("User %s baked a new %s at %s\n", this.getUserid(), this.getBreadType(), now = LocalDateTime.now()));
             myWriter.close();
         } catch (IOException e) {
             System.out.println("An error occurred.");

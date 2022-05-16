@@ -11,7 +11,7 @@ import java.util.List;
 
 public class SeedyBreadBakery extends ABakery {
     public SeedyBreadBakery(ABread prototype, int userId) {
-        super(prototype, userId);
+        super(prototype, userId, "seedy bread");
     }
 
     @Override
@@ -21,7 +21,7 @@ public class SeedyBreadBakery extends ABakery {
             breads.add(new SeedyBread());
             storage.notifyObservers(
                     storage.getObservers().stream()
-                            .filter(x -> x instanceof LogAdd).toList(), userId, prototype.getId()
+                            .filter(x -> x instanceof LogAdd).toList(), userId, this.getBreadType()
             );
         }
         return breads;

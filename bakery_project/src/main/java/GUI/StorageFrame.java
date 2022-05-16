@@ -33,7 +33,7 @@ public class StorageFrame extends JFrame {
 
     public StorageFrame(int userId) {
         this.userId = userId;
-        bakery = new WhiteBreadBakery(new WhiteBread(),userId);
+        bakery = new WhiteBreadBakery(new WhiteBread(), userId);
         initializeObservers(this.bakery);
         initializeGUI();
 
@@ -50,6 +50,7 @@ public class StorageFrame extends JFrame {
                 switch (selectedBread) {
                     case "WhiteBread":
                         bakery = new WhiteBreadBakery(new WhiteBread(), userId);
+                        initializeObservers(bakery);
                         try {
                             bakery.bake(amount);
                         } catch (IOException e) {
@@ -58,6 +59,7 @@ public class StorageFrame extends JFrame {
                         break;
                     case "FruitBread":
                         bakery = new FruitBreadBakery(new FruitBread(), userId);
+                        //initializeObservers(bakery);
                         try {
                             bakery.bake(amount);
                         }
@@ -67,6 +69,7 @@ public class StorageFrame extends JFrame {
                         break;
                     case "SeedyBread":
                         bakery = new SeedyBreadBakery(new SeedyBread(), userId);
+                        //initializeObservers(bakery);
                         try {
                             bakery.bake(amount);
                         }

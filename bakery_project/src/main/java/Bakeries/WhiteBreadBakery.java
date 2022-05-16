@@ -10,7 +10,7 @@ import java.util.List;
 
 public class WhiteBreadBakery extends ABakery {
     public WhiteBreadBakery(ABread prototype, int userId) {
-        super(prototype, userId);
+        super(prototype, userId, "white bread");
     }
 
     @Override
@@ -20,7 +20,7 @@ public class WhiteBreadBakery extends ABakery {
             breads.add(new WhiteBread());
             storage.notifyObservers(
                     storage.getObservers().stream()
-                            .filter(x -> x instanceof LogAdd).toList(), userId, prototype.getId()
+                            .filter(x -> x instanceof LogAdd).toList(), userId, this.getBreadType()
             );
         }
         return breads;
