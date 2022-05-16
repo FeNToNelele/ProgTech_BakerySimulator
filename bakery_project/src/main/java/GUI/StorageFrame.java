@@ -4,26 +4,20 @@ import Bakeries.ABakery;
 import Bakeries.FruitBreadBakery;
 import Bakeries.SeedyBreadBakery;
 import Bakeries.WhiteBreadBakery;
+import Breads.ABread;
 import Breads.Classes.FruitBread;
 import Breads.Classes.SeedyBread;
 import Breads.Classes.WhiteBread;
-import Storage.Classes.Storage;
 import Storage.Exceptions.BreadAlreadyExistsException;
 import Storage.Strategies.LogAdd;
 import Storage.Strategies.LogError;
 import javax.swing.*;
-import javax.swing.table.JTableHeader;
+import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;;
+import java.io.IOException;
+import java.util.List;;
 import Storage.Strategies.LogRemove;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
-import java.sql.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class StorageFrame extends JFrame {
     private JPanel storagePanel;
@@ -34,6 +28,7 @@ public class StorageFrame extends JFrame {
     private JComboBox breadCombo;
     private JLabel lblType;
     private JLabel lblAmount;
+    private JScrollPane scrllpnData;
 
     private int userId;
     private ABakery bakery;
@@ -60,49 +55,42 @@ public class StorageFrame extends JFrame {
                         initializeObservers(bakery);
                         try {
                             bakery.bake(amount);
+                            refreshTable();
                         } catch (IOException e) {
                             System.out.println("Could not create log file.");
+                        }
+                        catch (BreadAlreadyExistsException e) {
+                            System.out.println("You cannot bake the same bread twice!");
                         }
                         break;
                     case "FruitBread":
                         bakery = new FruitBreadBakery(new FruitBread(), userId);
-                        //initializeObservers(bakery);
+                        initializeObservers(bakery);
                         try {
                             bakery.bake(amount);
+                            refreshTable();
                         }
                         catch (IOException e) {
                             System.out.println("Could not create log file.");
+                        }
+                        catch (BreadAlreadyExistsException e) {
+                            System.out.println("You cannot bake the same bread twice!");
                         }
                         break;
                     case "SeedyBread":
                         bakery = new SeedyBreadBakery(new SeedyBread(), userId);
-                        //initializeObservers(bakery);
+                        initializeObservers(bakery);
                         try {
                             bakery.bake(amount);
+                            refreshTable();
                         }
                         catch (IOException e) {
                             System.out.println("Could not create log file.");
                         }
+                        catch (BreadAlreadyExistsException e) {
+                            System.out.println("You cannot bake the same bread twice!");
+                        }
                         break;
-                }
-                //ide jön az adatbázisba írás
-                try {
-                    String myDriver = "com.mysql.jdbc.Driver";
-                    String myUrl = "jdbc:mysql://localhost:3306/bakery";
-                    Connection conn = DriverManager.getConnection(myUrl, "root", "");
-                    File logFile = new File("logAdd.txt");
-                    Scanner logReader = new Scanner(logFile);
-                    Statement st = conn.createStatement();
-                    st.executeUpdate("DELETE from usagelog");
-                    while (logReader.hasNextLine()) {
-                        String[] data = logReader.nextLine().split(" ");
-                        st.executeUpdate("INSERT INTO usagelog " +
-                                "VALUES ("+data[1]+", '"+data[5]+" "+data[6]+"', '"+data[8]+"')");
-                    }
-                    logReader.close();
-                }
-                catch (Exception ex){
-
                 }
             }
         });
@@ -115,9 +103,9 @@ public class StorageFrame extends JFrame {
 
     private void initializeGUI() {
         setContentPane(storagePanel);
-        tblData = new JTable();
-        JTableHeader jTableHeader = tblData.getTableHeader();
-        jTableHeader.setVisible(true);
+        initTable();
+
+        DefaultTableModel defaultTableModel = (DefaultTableModel)tblData.getModel();
         setTitle("Storage");
         setSize(500, 500);
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -125,5 +113,31 @@ public class StorageFrame extends JFrame {
         breadCombo.addItem("WhiteBread");
         breadCombo.addItem("FruitBread");
         breadCombo.addItem("SeedyBread");
+    }
+
+    private void initTable() {
+        tblData.setModel(new DefaultTableModel(
+                getStorageDataAsJaggedArray(),
+                new String[] {"Id", "Name", "Price"}
+        ));
+    }
+
+    private void refreshTable() {
+        DefaultTableModel defaultTableModel = (DefaultTableModel) tblData.getModel();
+        defaultTableModel.setRowCount(0);
+        initTable();
+    }
+
+
+    private String[][] getStorageDataAsJaggedArray() {
+        String[][] data = new String[bakery.storage.getProducts().size()][];
+        List<ABread> products = bakery.storage.getProducts();
+
+        for (int i = 0; i < products.size(); i++) {
+            ABread bread = products.get(i);
+            data[i] = new String[]{ Integer.toString(bread.getId()), bread.getName(), Integer.toString(bread.getPrice()) };
+        }
+
+        return data;
     }
 }

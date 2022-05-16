@@ -3,9 +3,9 @@ package Bakeries;
 
 import Breads.ABread;
 import Storage.Classes.Storage;
+import Storage.Exceptions.BreadAlreadyExistsException;
 
 import java.io.IOException;
-import java.util.List;
 
 public abstract class ABakery {
     public Storage storage = new Storage();
@@ -34,7 +34,7 @@ public abstract class ABakery {
     }
 
     protected ABread prototype;
-    public abstract List<ABread> bake(int amount) throws IOException;
+    public abstract void bake(int amount) throws IOException, BreadAlreadyExistsException;
 
     public ABakery(ABread prototype, int userId, String breadType) {
         this.setPrototype(prototype);

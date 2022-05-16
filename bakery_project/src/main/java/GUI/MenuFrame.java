@@ -15,7 +15,7 @@ public class MenuFrame extends JFrame {
         setContentPane(menuPanel);
         setTitle("Menu");
         setSize(350, 500);
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE); //EXIT_ON_CLOSE?
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setVisible(true);
         btnCheckStorage.addActionListener(new ActionListener() {
             @Override
@@ -24,5 +24,4 @@ public class MenuFrame extends JFrame {
             }
         });
     }
-
 }
