@@ -17,6 +17,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;;
 import Storage.Strategies.LogRemove;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class StorageFrame extends JFrame {
     private JPanel storagePanel;
@@ -77,6 +84,25 @@ public class StorageFrame extends JFrame {
                             System.out.println("Could not create log file.");
                         }
                         break;
+                }
+                //ide jön az adatbázisba írás
+                try {
+                    String myDriver = "com.mysql.jdbc.Driver";
+                    String myUrl = "jdbc:mysql://localhost:3306/bakery";
+                    Connection conn = DriverManager.getConnection(myUrl, "root", "");
+                    File logFile = new File("logAdd.txt");
+                    Scanner logReader = new Scanner(logFile);
+                    Statement st = conn.createStatement();
+                    st.executeUpdate("DELETE from usagelog");
+                    while (logReader.hasNextLine()) {
+                        String[] data = logReader.nextLine().split(" ");
+                        st.executeUpdate("INSERT INTO usagelog " +
+                                "VALUES ("+data[1]+", '"+data[5]+" "+data[6]+"', '"+data[8]+"')");
+                    }
+                    logReader.close();
+                }
+                catch (Exception ex){
+
                 }
             }
         });
