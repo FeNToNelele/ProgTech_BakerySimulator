@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2022. Ápr 19. 16:45
+-- Létrehozás ideje: 2022. Máj 16. 13:50
 -- Kiszolgáló verziója: 10.4.22-MariaDB
 -- PHP verzió: 8.1.1
 
@@ -24,13 +24,13 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `bread`
+-- Tábla szerkezet ehhez a táblához `usagelog`
 --
 
-CREATE TABLE `bread` (
-  `id` int(6) UNSIGNED NOT NULL,
-  `name` varchar(30) NOT NULL,
-  `price` int(30) NOT NULL
+CREATE TABLE `usagelog` (
+  `UserID` int(11) DEFAULT NULL,
+  `ProductID` int(11) DEFAULT NULL,
+  `sysTime` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -58,12 +58,6 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
 --
 
 --
--- A tábla indexei `bread`
---
-ALTER TABLE `bread`
-  ADD PRIMARY KEY (`id`);
-
---
 -- A tábla indexei `users`
 --
 ALTER TABLE `users`
@@ -72,12 +66,6 @@ ALTER TABLE `users`
 --
 -- A kiírt táblák AUTO_INCREMENT értéke
 --
-
---
--- AUTO_INCREMENT a táblához `bread`
---
-ALTER TABLE `bread`
-  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT a táblához `users`
