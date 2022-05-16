@@ -8,13 +8,13 @@ public abstract class ABread implements Cloneable {
     protected static int ID = 1;
 
     public ABread(String name, int price) {
-        this.id = ID++;
+        this.id = ID;
         this.setName(name);
         this.setPrice(price);
     }
 
     private int id;
-    public int getId() { return this.id; }
+    public int getId() { return ID++; }
     public void setId(int id) { this.id = id; }
 
     private String name;
