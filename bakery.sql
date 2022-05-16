@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2022. Máj 16. 13:50
+-- Létrehozás ideje: 2022. Máj 16. 14:06
 -- Kiszolgáló verziója: 10.4.22-MariaDB
 -- PHP verzió: 8.1.1
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `usagelog` (
   `UserID` int(11) DEFAULT NULL,
-  `ProductID` int(11) DEFAULT NULL,
+  `Product` varchar(150) DEFAULT NULL,
   `sysTime` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
