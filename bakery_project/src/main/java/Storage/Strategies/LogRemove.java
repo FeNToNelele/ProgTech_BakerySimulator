@@ -22,8 +22,4 @@ public class LogRemove extends ALog {
             e.printStackTrace();
         }
     }
-
-    public LogRemove() {
-        super("logRemove");
-    }
 }

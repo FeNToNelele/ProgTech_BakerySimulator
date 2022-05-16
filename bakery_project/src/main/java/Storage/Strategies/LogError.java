@@ -22,8 +22,4 @@ public class LogError extends ALog {
             return;
         }
     }
-
-    public LogError() {
-        super("logError");
-    }
 }

@@ -19,8 +19,4 @@ public class LogAdd extends ALog {
             e.printStackTrace();
         }
     }
-
-    public LogAdd() {
-        super("logAdd");
-    }
 }
