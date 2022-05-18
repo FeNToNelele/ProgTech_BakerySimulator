@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 public class MenuFrame extends JFrame {
     private JButton btnCheckStorage;
     private JPanel menuPanel;
+    private JLabel lblWelcome;
 
     private int userId;
     public MenuFrame(int userId) {
@@ -15,7 +16,7 @@ public class MenuFrame extends JFrame {
         setContentPane(menuPanel);
         setTitle("Menu");
         setSize(350, 500);
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         btnCheckStorage.addActionListener(new ActionListener() {
             @Override
