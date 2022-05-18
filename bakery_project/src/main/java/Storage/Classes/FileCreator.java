@@ -20,14 +20,12 @@ public class FileCreator {
     }
 
     public void createFile() {
+        File logFile = new File(this.getFilename());
         try {
-            File myObj = new File(this.getFilename());
-            if (myObj.createNewFile()) {
-                System.out.println("File created: " + this.getFilename());
-            }
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
+            logFile.createNewFile();
+        }
+        catch (IOException e) {
+            System.out.println("File could not be created due to IOException.");
         }
     }
 }
